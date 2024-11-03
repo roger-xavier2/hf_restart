@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       SPACE_NAME: "rogerxavier/pixiv"
-      TOKEN: "${{ secrets.HUGGING_FACE_TOKEN }}"
+      TOKEN: "${{ secrets.HF_SPACE_API_TOKEN }}"
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
