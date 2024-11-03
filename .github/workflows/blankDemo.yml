@@ -1,4 +1,4 @@
-name: Restart Hugging Face Space Container
+name: blank Restart HF Space Demo
 
 on:
   workflow_dispatch:  # 允许手动触发
