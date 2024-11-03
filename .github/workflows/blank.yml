@@ -1,8 +1,6 @@
 name: Restart Hugging Face Space Container
 
 on:
-  schedule:
-    - cron: '0 */3 * * *'  # 每 3 小时执行一次
   workflow_dispatch:  # 允许手动触发
 
 jobs:
