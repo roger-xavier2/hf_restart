@@ -15,3 +15,49 @@ jobs:
         run: |
           curl -X POST "https://huggingface.co/api/spaces/uu_pixiv_api/restart" \
           -H "Authorization: Bearer $HF_SPACE_API_TOKEN"
+  restart-hf-pixiv:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Restart Hugging Face Space Container
+        env:
+          HF_SPACE_API_TOKEN: ${{ secrets.HF_SPACE_API_TOKEN }}  # 存储你的 Hugging Face Space API Token
+        run: |
+          curl -X POST "https://huggingface.co/api/spaces/pixiv/restart" \
+          -H "Authorization: Bearer $HF_SPACE_API_TOKEN"
+  restart-hf-payHook:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Restart Hugging Face Space Container
+        env:
+          HF_SPACE_API_TOKEN: ${{ secrets.HF_SPACE_API_TOKEN }}  # 存储你的 Hugging Face Space API Token
+        run: |
+          curl -X POST "https://huggingface.co/api/spaces/payHook/restart" \
+          -H "Authorization: Bearer $HF_SPACE_API_TOKEN"
+  restart-hf-iizhiApi:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Restart Hugging Face Space Container
+        env:
+          HF_SPACE_API_TOKEN: ${{ secrets.HF_SPACE_API_TOKEN }}  # 存储你的 Hugging Face Space API Token
+        run: |
+          curl -X POST "https://huggingface.co/api/spaces/iizhiApi/restart" \
+          -H "Authorization: Bearer $HF_SPACE_API_TOKEN"
+  restart-hf-static_config:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Restart Hugging Face Space Container
+        env:
+          HF_SPACE_API_TOKEN: ${{ secrets.HF_SPACE_API_TOKEN }}  # 存储你的 Hugging Face Space API Token
+        run: |
+          curl -X POST "https://huggingface.co/api/spaces/static_config/restart" \
+          -H "Authorization: Bearer $HF_SPACE_API_TOKEN"
+  restart-hf-v2b_proxy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Restart Hugging Face Space Container
+        env:
+          HF_SPACE_API_TOKEN: ${{ secrets.HF_SPACE_API_TOKEN }}  # 存储你的 Hugging Face Space API Token
+        run: |
+          curl -X POST "https://huggingface.co/api/spaces/v2b_proxy/restart" \
+          -H "Authorization: Bearer $HF_SPACE_API_TOKEN"
+  
