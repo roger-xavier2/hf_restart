@@ -1,8 +1,6 @@
 name: Check and Restart Hugging Face Space
 
 on:
-  schedule:
-    - cron: '*/30 * * * *'  # 每30分钟检查一次
   workflow_dispatch:  # 允许手动触发
   
 jobs:
