@@ -1,4 +1,4 @@
-name: Check and Restart Hugging Face Space
+name: Check and Restart HF Demo
 
 on:
   workflow_dispatch:  # 允许手动触发
