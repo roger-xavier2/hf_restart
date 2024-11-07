@@ -2,7 +2,7 @@ name: Check and Restart v2b_proxy Space
 
 on:
   schedule:
-    - cron: '*/6 * * * *'  # 每6分钟检查一次
+    - cron: '*/30 * * * *'  # 每30分钟检查一次,一个月2*24*30=1440<2000(普通账户限制)
   workflow_dispatch:  # 允许手动触发
 jobs:
   check-space-status:
