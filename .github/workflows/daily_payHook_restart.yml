@@ -1,0 +1,19 @@
+name: Daily restart payHook space
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # daily restart to guarantee stability
+  workflow_dispatch:  # 允许手动触发
+jobs:
+  check-space-status:
+    runs-on: ubuntu-latest
+    env:
+      SPACE_NAME: "rogerxavier/payHook"
+      TOKEN: "${{ secrets.HF_SPACE_API_TOKEN }}"
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: daily restart the space
+        run: |
+          echo "Restarting the space..."
+          curl -X POST -H "Authorization: Bearer $TOKEN" "https://huggingface.co/api/spaces/$SPACE_NAME/restart"
