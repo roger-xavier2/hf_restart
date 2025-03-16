@@ -2,7 +2,7 @@ name: Daily restart payHook space
 
 on:
   schedule:
-    - cron: '0 0,12 * * *'  # 0,12:00 daily restart to guarantee stability
+    - cron: '0 */3 * * *'  # 0,12:00..  daily restart to guarantee stability
   workflow_dispatch:  # 允许手动触发
 jobs:
   check-space-status:
