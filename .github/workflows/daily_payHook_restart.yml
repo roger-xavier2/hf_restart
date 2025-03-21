@@ -2,7 +2,7 @@ name: Daily restart payHook space
 
 on:
   schedule:
-    - cron: '5 * * * *'  # multi  daily restart to guarantee stability
+    - cron: '5 */3 * * *'  # multi  daily restart to guarantee stability
   workflow_dispatch:  # 允许手动触发
 jobs:
   check-space-status:
